@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Courier New', monospace;
+    color: black;
+  }
+}
+
+@layer components {
+  .quiz-container {
+    @apply min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50 p-4;
+  }
+  
+  .question-card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-200 p-8 max-w-4xl mx-auto;
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .question-card h2,
+  .question-card p,
+  .question-card span,
+  .question-card pre,
+  .question-card div {
+    color: black !important;
+  }
+  
+  .option-button {
+    @apply w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-kcna-primary hover:bg-cyan-50 transition-all duration-200 mb-3;
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .option-button span {
+    color: black !important;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .option-selected {
+    @apply border-kcna-primary bg-cyan-50 text-kcna-primary font-medium;
+  }
+  
+  .option-correct {
+    @apply border-exam-green bg-green-50 text-exam-green;
+  }
+  
+  .option-incorrect {
+    @apply border-exam-red bg-red-50 text-exam-red;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-3;
+  }
+  
+  .progress-fill {
+    @apply bg-gradient-to-r from-kcna-primary to-kcna-secondary h-3 rounded-full transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-kcna-primary hover:bg-kcna-secondary text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 px-8 rounded-lg transition-colors duration-200;
+  }
+  
+  .result-card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6 mb-6;
+  }
+  
+  .topic-progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2;
+  }
+}
