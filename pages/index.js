@@ -46,7 +46,7 @@ export default function Home() {
                   className={`
                     p-6 border-2 rounded-xl cursor-pointer transition-all duration-200 hover:shadow-lg
                     ${selectedExamSet === examSet 
-                      ? 'border-kcna-primary bg-cyan-50' 
+                      ? 'border-kcna-primary bg-kcna-primary' 
                       : 'border-gray-200 bg-white hover:border-kcna-primary'
                     }
                   `}
@@ -55,22 +55,28 @@ export default function Home() {
                     <div className={`
                       w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold
                       ${selectedExamSet === examSet 
-                        ? 'bg-kcna-primary text-white' 
+                        ? 'bg-white text-kcna-primary' 
                         : 'bg-gray-100 text-gray-600'
                       }
                     `}>
                       {setNumber}
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className={`text-xl font-semibold mb-2 ${
+                      selectedExamSet === examSet ? 'text-white' : 'text-gray-900'
+                    }`}>
                       Exam Set {setNumber}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4">
+                    <p className={`mb-4 ${
+                      selectedExamSet === examSet ? 'text-teal-100' : 'text-gray-600'
+                    }`}>
                       {questionCount} Questions
                     </p>
                     
-                    <div className="text-sm text-gray-500">
+                    <div className={`text-sm ${
+                      selectedExamSet === examSet ? 'text-teal-100' : 'text-gray-500'
+                    }`}>
                       {setNumber === 1 && "Kubernetes Fundamentals & Core Concepts"}
                       {setNumber === 2 && "Advanced Kubernetes & Cloud Native"}
                       {setNumber === 3 && "Security, Monitoring & Best Practices"}
@@ -78,7 +84,7 @@ export default function Home() {
                     
                     {selectedExamSet === examSet && (
                       <div className="mt-4">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-kcna-primary text-white">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white text-kcna-primary">
                           ✓ Selected
                         </span>
                       </div>
