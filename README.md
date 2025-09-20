@@ -7,6 +7,7 @@ A comprehensive web-based exam simulator for the Kubernetes and Cloud Native Ass
 - 🎯 **Real KCNA Experience**: Questions designed to match actual certification exam patterns
 - 📊 **Detailed Analytics**: Topic-wise performance breakdown and insights
 - 🔄 **Review Mode**: Detailed explanations for each question with correct answers highlighted
+- 🤖 **AI Study Notes**: Generate personalized study notes for incorrect answers using Google Gemini AI
 - 🎨 **Modern UI**: Clean, responsive design optimized for exam taking
 - ⚡ **Fast Performance**: Built with Next.js for optimal loading speeds
 - 📱 **Mobile Friendly**: Works seamlessly across all device sizes
@@ -30,12 +31,23 @@ A comprehensive web-based exam simulator for the Kubernetes and Cloud Native Ass
    npm install
    ```
 
-3. Run the development server:
+3. (Optional) Set up AI Analysis Feature:
+   - Get a Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+   - Create a `.env.local` file in the project root:
+     ```bash
+     GEMINI_API_KEY=your_gemini_api_key_here
+     
+     # Optional: Configure Gemini model (default: gemini-1.5-flash)
+     # Available: gemini-1.5-flash, gemini-1.5-pro, gemini-pro, gemini-1.5-flash-8b
+     GEMINI_MODEL=gemini-1.5-flash
+     ```
+
+4. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ### Building for Production
 
@@ -51,6 +63,8 @@ kcna-exam-dump/
 ├── data/
 │   └── questions.js          # Question bank with KCNA exam questions
 ├── pages/
+│   ├── api/
+│   │   └── analyze-mistakes.js # Gemini AI integration for study notes
 │   ├── _app.js              # Next.js app wrapper
 │   ├── index.js             # Home page with quiz configuration
 │   ├── quiz.js              # Quiz interface
@@ -85,6 +99,7 @@ kcna-exam-dump/
 2. **Take Quiz**: Answer questions with multiple choice interface
 3. **Submit & Review**: Get instant results with detailed explanations
 4. **Track Progress**: View topic-wise performance analytics
+5. **AI Analysis**: Click "Analyze AI" to generate personalized study notes for questions you got wrong
 
 ## Adding More Questions
 

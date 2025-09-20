@@ -16,7 +16,8 @@ module.exports = {
         'kcna-accent': '#06b6d4',
       },
       fontFamily: {
-        'mono': ['Courier New', 'monospace'],
+        'sans': ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace'],
       },
     },
   },

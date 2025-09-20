@@ -718,4 +718,4 @@ export const examSet1Questions = [
   }
 ];
 
-export default examSet1Questions3
+export default examSet1Questions

@@ -190,7 +190,7 @@ export default function Quiz() {
 
               {/* Question */}
               <div className="mb-6">
-                <h2 className="text-xl font-semibold text-black mb-4">
+                <h2 className="text-xl font-semibold text-black mb-4 quiz-text">
                   {currentQuestion.question}
                 </h2>
               </div>
@@ -211,7 +211,7 @@ export default function Quiz() {
                       key={index}
                       onClick={() => handleAnswerSelect(currentQuestion.id, index)}
                       className={`
-                        option-button text-base
+                        option-button quiz-text
                         ${isSelected ? 'option-selected' : ''}
                       `}
                     >

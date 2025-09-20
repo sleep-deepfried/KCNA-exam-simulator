@@ -11,6 +11,7 @@
     "parse": "node scripts/parseKcnaMarkdown.cjs"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.20.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
