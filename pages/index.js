@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react'
+import { DEFAULT_PRICE } from '../lib/prices'
+
 const stats = [
   { value: '150+', label: 'Practice Questions' },
   { value: '5', label: 'KCNA Domains' },
@@ -13,6 +16,19 @@ const domains = [
 ]
 
 export default function Home() {
+  const [price, setPrice] = useState(DEFAULT_PRICE)
+
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/price')
+      .then((r) => r.ok ? r.json() : null)
+      .then((data) => {
+        if (!cancelled && data?.price) setPrice(data.price)
+      })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [])
+
   return (
     <div className="bg-gradient-to-br from-cyan-50 via-white to-blue-50 min-h-screen">
 
@@ -50,7 +66,7 @@ export default function Home() {
                 <span className="block text-base font-semibold leading-none">App Store</span>
               </span>
             </a>
-            <span className="text-sm text-gray-400">iOS 18.0 or later · Free</span>
+            <span className="text-sm text-gray-400">iOS 18.0 or later · {price}</span>
           </div>
 
         </div>
