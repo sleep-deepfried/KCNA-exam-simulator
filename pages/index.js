@@ -12,25 +12,6 @@ const domains = [
   { name: 'Cloud Native App Delivery', weight: 8 },
 ]
 
-const testimonials = [
-  {
-    initials: 'MR',
-    name: 'Marcus R.',
-    role: 'Cloud Engineer',
-    color: 'bg-kcna-primary',
-    quote:
-      'The domain breakdown after each exam told me exactly where I was losing points. Passed on my first attempt.',
-  },
-  {
-    initials: 'SL',
-    name: 'Sofia L.',
-    role: 'DevOps Lead',
-    color: 'bg-purple-500',
-    quote:
-      'Having the Kubernetes concept cards right next to the practice questions made studying so much faster.',
-  },
-]
-
 export default function Home() {
   return (
     <div className="bg-gradient-to-br from-cyan-50 via-white to-blue-50 min-h-screen">
@@ -269,30 +250,6 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
-
-      {/* ─── TESTIMONIALS ─── */}
-      <section className="max-w-6xl mx-auto px-6 pb-14">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Built for KCNA candidates</h2>
-        <p className="text-gray-500 text-sm mb-8">From people who've been through the exam.</p>
-        <div className="grid sm:grid-cols-2 gap-5">
-          {testimonials.map(({ initials, name, role, color, quote }) => (
-            <div key={name} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-              <div className="flex items-center gap-1 text-yellow-400 text-sm mb-4">★★★★★</div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-5">"{quote}"</p>
-              <div className="flex items-center gap-3">
-                <div className={`w-9 h-9 rounded-full ${color} flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
-                  {initials}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-900">{name}</p>
-                  <p className="text-xs text-gray-500">{role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-gray-400 mt-3">* Testimonials are illustrative.</p>
       </section>
 
       {/* ─── DOMAIN COVERAGE ─── */}
