@@ -55,7 +55,9 @@ export default function Home() {
           {/* CTA row */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
             <a
-              href="#"
+              href="https://apps.apple.com/app/kcna-exam-dojo/id6762566276"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-700 text-white px-6 py-3.5 rounded-xl font-medium transition-colors shadow-lg"
             >
               <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -66,7 +68,7 @@ export default function Home() {
                 <span className="block text-base font-semibold leading-none">App Store</span>
               </span>
             </a>
-            <span className="text-sm text-gray-400">iOS 18.0 or later · {price}</span>
+            <span className="text-sm text-gray-400">iOS 26.0 or later · {price}</span>
           </div>
 
         </div>
@@ -302,7 +304,9 @@ export default function Home() {
             Download KCNA Exam Dojo and start studying today — no account, no Wi-Fi required.
           </p>
           <a
-            href="#"
+            href="https://apps.apple.com/app/kcna-exam-dojo/id6762566276"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-white text-kcna-primary hover:bg-gray-100 px-7 py-3.5 rounded-xl font-semibold transition-colors shadow-lg"
           >
             <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">

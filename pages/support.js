@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'What iOS version is required?',
-    a: 'KCNA Exam Dojo requires iOS 18.0 or later.',
+    a: 'KCNA Exam Dojo requires iOS 26.0 or later.',
   },
   {
     q: 'How do I report a mistake in a question or explanation?',
